@@ -18,6 +18,7 @@ namespace MovieLibraryAPI
 {
     public class Startup
     {
+        readonly string CORSOpenPolicy = "OpenCORSPolicy";
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -28,6 +29,15 @@ namespace MovieLibraryAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(options =>
+            {
+                options.AddPolicy(name: CORSOpenPolicy,
+                                  builder =>
+                                  {
+                                      builder.WithOrigins("*").AllowAnyHeader()
+                                                  .AllowAnyMethod();
+                                  });
+            });
             services.AddDbContext<ApplicationDbContext>(opts =>
            opts.UseSqlServer(Configuration.GetConnectionString("sqlConnection")));
             services.AddControllers();
@@ -50,6 +60,8 @@ namespace MovieLibraryAPI
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors(CORSOpenPolicy);
 
             app.UseAuthorization();
 

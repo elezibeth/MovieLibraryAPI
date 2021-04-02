@@ -1,0 +1,175 @@
+{
+	"info": {
+		"_postman_id": "44b054fc-b715-4596-97eb-957840c1f6d9",
+		"name": "MovieLibrary",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://localhost:44359/api/Movies/AllMovies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44359/api/Movies/AllMovies",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44359",
+					"path": [
+						"api",
+						"Movies",
+						"AllMovies"
+					]
+				},
+				"description": "All movies"
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44359/api/Movies/3",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 5,\r\n  \"title\": \"test1\",\r\n  \"genre\": \"edit test 1\",\r\n  \"directorName\": \"edit test 1g\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44359/api/Movies/3",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44359",
+					"path": [
+						"api",
+						"Movies",
+						"3"
+					]
+				},
+				"description": "get movie by id"
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44359/api/Movies/3",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 5,\r\n  \"title\": \"test1\",\r\n  \"genre\": \"edit test 1\",\r\n  \"directorName\": \"edit test 1g\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44359/api/Movies/3",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44359",
+					"path": [
+						"api",
+						"Movies",
+						"3"
+					]
+				},
+				"description": "edit/put"
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44359/api/Movies/3",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"test1\",\r\n  \"genre\": \"edit test 1\",\r\n  \"directorName\": \"edit test 1g\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44359/api/Movies",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44359",
+					"path": [
+						"api",
+						"Movies"
+					]
+				},
+				"description": "post"
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44359/api/Movies/3",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"test1\",\r\n  \"genre\": \"edit test 1\",\r\n  \"directorName\": \"edit test 1g\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44359/api/Movies/6",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44359",
+					"path": [
+						"api",
+						"Movies",
+						"6"
+					]
+				},
+				"description": "Delete"
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44359/api/Movies/3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44359/api/Movies/3",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44359",
+					"path": [
+						"api",
+						"Movies",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

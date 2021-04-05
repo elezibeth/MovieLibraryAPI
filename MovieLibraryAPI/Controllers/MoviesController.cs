@@ -102,10 +102,10 @@ namespace MovieLibraryAPI.Controllers
         // POST: api/Movies
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Movie>> PostMovies(Movie movies)
+        public IActionResult PostMovies([FromBody] Movie movies)
         {
-            _context.Movies.Add(movies);
-            await _context.SaveChangesAsync();
+            _context.Entry(movies).State = EntityState.Added;
+            _context.SaveChanges();
             return CreatedAtAction("GetMovies", new { id = movies.Id }, movies);
         }
         // DELETE: api/Movies/5
